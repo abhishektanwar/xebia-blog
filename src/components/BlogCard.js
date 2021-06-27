@@ -5,9 +5,9 @@ import styled from 'styled-components'
 const BlogCard = ({post}) => {
     console.log("post",post)
     return (
-        <BlogCardContainer><Link to={`/blogs/${post.id}`}>
+        <BlogCardContainer><Link style={{textDecoration:"none" ,color:"black"}} to={`/blogs/${post.id}`}>
             <BlogHeading>
-                <h3>{post["title"]}</h3>
+                <h3 id="kl">{post["title"]}</h3>
             </BlogHeading>
             <BlogSubHeading>
                 <h4>{post["subTitle"]}</h4>
@@ -29,11 +29,20 @@ const BlogCardContainer = styled.div`
     width: 300px;
     border-radius: 5px;
     margin: 20px;
+    color:black;
+    
+    > #kl{
+        text-decoration: none;
+    }
 `;
 
 const BlogHeading = styled.div`
     display: flex;
     font-size: large;
+
+    > #kl{
+        text-decoration: none;
+    }
 `;
 
 const BlogSubHeading = styled.div``;
