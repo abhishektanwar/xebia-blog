@@ -20,10 +20,11 @@ const BlogDetail = (props) => {
             {/* {post} */}
             <Navbar />
             <BlogHeading>
-                {post['title']}
+                <h1>{post['title']}</h1>
             </BlogHeading>
             <BlogContent>
-                {post.content}
+                <p>{post.content}</p>
+                
             </BlogContent>
         </BlogDetailContainer>
     )
@@ -37,5 +38,13 @@ const BlogDetailContainer = styled.div`
     flex-direction: column;
 `;
 
-const BlogHeading = styled.div``;
-const BlogContent = styled.div``;
+const BlogHeading = styled.div`
+
+`;
+const BlogContent = styled.div`
+    border: 1px solid gray;
+    width: 600px;
+    height: 500px;
+    border-radius:4px;
+    overflow-y: scroll;
+`;
